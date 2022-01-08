@@ -21,7 +21,6 @@ Scala	2.11.5
 Kafka_2.11	2.4.1
 Flink-bin-Scala_2.11	1.12.5
 ```
-
 ### 本地环境
 ```
 MySQL	8.0.27
@@ -33,7 +32,6 @@ python	3.8
 flask	1.1.2
 flask-cors	3.0.10
 ```
-
 ### 本地导入jar包
 ```
 fasyjson	1.2.78
@@ -42,7 +40,6 @@ flink-connector-redis_2.11	1.0
 jedis	2.9.0
 commons-pool2	2.6.0
 ```
-
 ### 另附带分类好的jar包文件夹：（也需要导入）
 
 ```
@@ -51,9 +48,7 @@ Kafka libs（有关Kafka所有jar包）
 Scala libs（有关Scala所有jar包）
 MySQL-Kafka（有关Kafka读取MySQL binlog日志所有java文件）
 ```
-
 ## 2.环境启动命令和运行代码的方法
-
 
 数据产生器 -> MysqlToKafka.java -> KafkaToFlink.java -> Flask.py
 
@@ -61,10 +56,7 @@ MySQL-Kafka（有关Kafka读取MySQL binlog日志所有java文件）
 
 19208118-王泽川 大作业报告.docx
 
-
-
 ## 3.代码目录结构说明
-
 ```
 │  项目报告.docx
 │  Dashboard实时大屏展示.mp4
@@ -173,7 +165,6 @@ MySQL-Kafka（有关Kafka读取MySQL binlog日志所有java文件）
             MysqlToKafka.java
             PaymentInfo.java
 ```            
-
 ## 4.常见问题说明
 1）无法连接到MySQL的Binlog日志，连接到Binlog后却无法从日志种准确提出对应的数据。
 
