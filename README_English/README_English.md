@@ -89,14 +89,14 @@ MySQL-Kafka（All java files related to Kafka reading MySQL binlog logs）
 数据产生器 -> MysqlToKafka.java -> KafkaToFlink.java -> Flask.py
 
 Specific startup steps
-    ```
+```
     1).  Start MySQL database service and redis database service first
     (if you have run this project before, you need to use the "flush" command to clear all data in the redis database.)
     2).  To run the project, we also need to open zookeeper and Kafka distributed cluster framework in the virtual machine
     3).  First, reload the corresponding table in the MySQL database, set the number of threads, and start the data simulation generator.
     4).  Next, run mysqltokafka java、KafkaToFlink. Java and flask Py three programs. There are no hard requirements for their startup sequence, but here we suggest that we run the code program in the order of the overall implementation process: run mysqltokafka. Com first Java, and then run kafkatoflink Java, and finally run flash py。
     5).  After all the above programs are running, start the HTML page. Here, use the method in pychart that can directly open the corresponding HTML. Of course, you can also use the "127.0.0.1 /" IP page defined in the flash framework to open it.
-
+```
 
 ## 5. Description of code directory structure
 
