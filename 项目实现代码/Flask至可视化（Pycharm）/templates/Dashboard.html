@@ -1,0 +1,209 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+<!--   http-equiv="refresh" content="5"   -->
+    <title>index</title>
+    <script type="text/javascript" src="../static/js/jquery.js"></script>
+    <link rel="stylesheet" href="../static/css/comon0.css">
+</head>
+	<script>
+	$(window).load(function(){
+             $(".loading").fadeOut()
+            })
+
+    $(document).ready(function(){
+        var whei=$(window).width()
+        $("html").css({fontSize:whei/20})
+        $(window).resize(function(){
+            var whei=$(window).width()
+            $("html").css({fontSize:whei/20})
+        });
+	});
+	</script>
+	<script type="text/javascript" src="../static/js/echarts.min.js"></script>
+<!--	<script language="JavaScript" src="../static/js/js.js"></script>-->
+    <script language="JavaScript" src="../static/js/echarts1.js"></script>
+    <script language="JavaScript" src="../static/js/echarts2.js"></script>
+    <script language="JavaScript" src="../static/js/echarts5.js"></script>
+    <script language="JavaScript" src="../static/js/echarts4.js"></script>
+    <script language="JavaScript" src="../static/js/echarts3.js"></script>
+    <script language="JavaScript" src="../static/js/echarts6.js"></script>
+<body>
+<div class="canvas" style="opacity: .2">
+	<iframe frameborder="0" src="../static/js/index.html" style="width: 100%; height: 100%"></iframe>
+	</div>
+<div class="loading">
+  <div class="loadbox"> <img src="../static/picture/loading.gif"> 页面加载中... </div>
+</div>
+<div class="head">
+
+  <h1><img src="../static/picture/nchu.png">订单销量实时DashBoard🐖</h1>
+  <div class="weather">
+    <span id="speed"></span>
+    <span></span><img src="../static/picture/weather.png"><span id="showTime"></span>
+  </div>
+	<script>
+      function doing3(){
+          let order = 0;
+          $.ajax({
+          type: 'GET',
+          url: 'http://127.0.0.1:5000/speed',
+          dataType: "json",
+          async: false,
+          success: function (res0) {
+            //console.log(res0);
+            var tt = parseInt(res0);
+            document.getElementById("speed").innerHTML = "粗略速度为："+tt;
+            }
+          })
+      }
+        setTimeout(function() {
+          doing3();
+        }, 0);
+        setInterval(function () {
+          doing3();
+        }, 1000);
+    </script>
+	<script>
+    var t = null;
+    t = setTimeout(time,1000);//開始运行
+    function time()
+    {
+       clearTimeout(t);//清除定时器
+       dt = new Date();
+       var y=dt.getFullYear();
+       var mt=dt.getMonth()+1;
+       var day=dt.getDate();
+       var h=dt.getHours();//获取时
+       var m=dt.getMinutes();//获取分
+       var s=dt.getSeconds();//获取秒
+       document.getElementById("showTime").innerHTML = y+"年"+mt+"月"+day+"日 "+h+"时"+m+"分"+s+"秒";
+       t = setTimeout(time,1000); //设定定时器，循环运行     
+    }
+    </script>
+	
+	
+</div>
+<div class="mainbox">
+  <ul class="clearfix">
+    <li>
+      <div class="boxall" style="height: 3.2rem">
+        <div class="alltitle">出版社总销量前十</div>
+        <div class="allnav" id="echart1"></div>
+        <div class="boxfoot"></div>
+      </div>
+      <div class="boxall" style="height: 3.2rem">
+        <div class="alltitle">图书销售数量前十</div>
+        <div class="allnav" id="echart2"></div>
+        <div class="boxfoot"></div>
+      </div>
+      <div class="boxall" style="height: 3.2rem">
+        <div style="height:100%; width: 100%;">
+          <div class="alltitle">图书类型销量前五</div>
+          <div class="allnav" id="echart3"></div>
+          <div class="boxfoot"></div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="bar">
+        <div class="barbox">
+          <ul class="clearfix">
+            <li class="pulll_left counter" id="sum" style="color:white">0</li>
+            <li class="pulll_left counter" id="order" style="color:white">0</li>
+          </ul>
+        </div>
+        <div class="barbox2">
+          <ul class="clearfix">
+            <li class="pulll_left">总销售额</li>
+            <li class="pulll_left">总订单数量</li>
+          </ul>
+        </div>
+      </div>
+      <div class="map">
+        <div class="map1"><img src="../static/picture/lbx.png"></div>
+        <div class="map2"><img src="../static/picture/jt.png"></div>
+        <div class="map3"><img src="../static/picture/map.png"></div>
+        <div class="map4" id="map_1"></div>
+      </div>
+    </li>
+    <li>
+          <div class="boxall" style="height:3.4rem">
+        <div class="alltitle">下单客户数</div>
+        <div class="allnav" id="echart4"></div>
+        <div class="boxfoot"></div>
+      </div>
+      <div class="boxall" style="height: 3.2rem">
+        <div class="alltitle">发货源</div>
+        <div class="allnav" id="echart5"></div>
+        <div class="boxfoot"></div>
+      </div>
+      <div class="boxall" style="height: 3rem">
+        <div class="alltitle">付款方式</div>
+        <div class="allnav" id="echart6"></div>
+        <div class="boxfoot"></div>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="back"></div>
+
+<!--实时获取并刷新销售额以及订单数-->
+<script>
+  function doing1() {
+    let sum = 0;
+    $.ajax({
+      type: 'GET',
+      url: 'http://127.0.0.1:5000/total_price',
+      dataType: "json",
+      async: false,
+      success: function (res0) {
+        // console.log(res0);
+        sum = parseInt(res0);
+        document.getElementById("sum").innerHTML = sum;
+        // for (var i = 0; i < res0.length; i++) {
+        //   // console.log(res0[i])
+        //   sum = parseInt(res0[i].num);
+        // };
+      }
+    })
+  }
+  setTimeout(function() {
+    doing1();
+  }, 0);
+  setInterval(function () {
+    doing1();
+  }, 1000);
+</script>
+<script>
+  function doing2() {
+    let order = 0;
+    $.ajax({
+      type: 'GET',
+      url: 'http://127.0.0.1:5000/order_num',
+      dataType: "json",
+      async: false,
+      success: function (res0) {
+        console.log(res0);
+        order = parseInt(res0);
+        document.getElementById("order").innerHTML = order;
+        // for (var i = 0; i < res0.length; i++) {
+        //   // console.log(res0[i])
+        //   sum = parseInt(res0[i].num);
+        // };
+      }
+    })
+  }
+  setTimeout(function() {
+    doing2();
+  }, 0);
+  setInterval(function () {
+    doing2();
+  }, 1000);
+</script>
+
+<script type="text/javascript" src="../static/js/china.js"></script>
+<script type="text/javascript" src="../static/js/area_echarts.js"></script>
+</body>
+</html>
