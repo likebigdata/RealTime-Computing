@@ -22,15 +22,15 @@ Use real-time computing technology and web technology to build a big data Kanban
 
 By simulating the real-time processing of order information of e-book platform, the massive order information is processed by using real-time computing related technology and distributed cluster idea. Finally, the data analysis results are displayed on the dashboard visualization screen.
 
--The interface is refreshed every 3 seconds. If it can be refreshed every 2 seconds or 1 second;
--Display the processed speed of the current order, with the unit of "piece / second";
--The big data Kanban interface shall be concise, atmospheric and characteristic;
--Display the basic information of total sales amount, order quantity and number of customers placed as of the current time;
--Display the ranking list of the top 10 books in sales as of the current time;
--Display the ranking list of the top 10 publishers in terms of sales as of the current time;
--Display the cumulative number of underground single customers in China (by province) and display it visually on the map;
--The data statistical error (data loss and statistical error) shall not exceed 1%, and experiments shall be designed to calculate the data error rate;
--The delay of displayed data shall not exceed 30 seconds, and the latest time of acquired data shall be displayed at each refresh;
+- The interface is refreshed every 3 seconds. If it can be refreshed every 2 seconds or 1 second;
+- Display the processed speed of the current order, with the unit of "piece / second";
+- The big data Kanban interface shall be concise, atmospheric and characteristic;
+- Display the basic information of total sales amount, order quantity and number of customers placed as of the current time;
+- Display the ranking list of the top 10 books in sales as of the current time;
+- Display the ranking list of the top 10 publishers in terms of sales as of the current time;
+- Display the cumulative number of underground single customers in China (by province) and display it visually on the map;
+- The data statistical error (data loss and statistical error) shall not exceed 1%, and experiments shall be designed to calculate the data error rate;
+- The delay of displayed data shall not exceed 30 seconds, and the latest time of acquired data shall be displayed at each refresh;
 
 
 ## 2. Scheme analysis
