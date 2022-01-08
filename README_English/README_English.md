@@ -160,15 +160,15 @@ MySQL-Kafka（All java files related to Kafka reading MySQL binlog logs）
             PaymentInfo.java
 ```
 ## 4. Frequently asked questions
-1 Unable to connect to MySQL's binlog. After connecting to binlog, the corresponding data cannot be accurately proposed from the log.
+1. Unable to connect to MySQL's binlog. After connecting to binlog, the corresponding data cannot be accurately proposed from the log.
 
-2 In Flink framework, data in datastream data stream cannot be extracted, classified and processed
+2. In Flink framework, data in datastream data stream cannot be extracted, classified and processed
 
-3 Real time chart refresh problem (data cannot be refreshed in time, refresh screen, etc.)
+3. Real time chart refresh problem (data cannot be refreshed in time, refresh screen, etc.)
 
-4 The front-end display process becomes stuck with the increase of data (using redis, memory storage occupation) over time
+4. The front-end display process becomes stuck with the increase of data (using redis, memory storage occupation) over time
 
-5 ......
+5. ......
 
 （See the documents at the same level for details
 
