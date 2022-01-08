@@ -73,7 +73,7 @@ jedis	2.9.0
 commons-pool2	2.6.0
 ```
 
-### 另附带分类好的jar包文件夹：（也需要导入）
+### 另注意jar包文件夹：（也需要导入）
 
 ```
 Flink libs（有关Flink所有jar包）
@@ -107,67 +107,12 @@ MySQL-Kafka（有关Kafka读取MySQL binlog日志所有java文件）
 ## 5.代码目录结构说明
 
 ```
-│  项目报告.docx
-│  Dashboard实时大屏展示.mp4
 │  README.md
-│  项目整体过程展示.mp4
 │
 ├─README_English
 │      README_English.txt
 │  
-├─作业项目要求
-│      大作业要求.pdf
-│      软件说明文档-v0.5.pdf
 │
-├─数据模拟生产器
-│      allbook.csv
-│      dist.zip
-│      place.json
-│      read.exe
-│
-├─相关配置文件
-│  ├─本地导入jar包
-│  │  │  commons-pool2-2.6.0.jar
-│  │  │  fastjson-1.2.78.jar
-│  │  │  flink-connector-kafka_2.11-1.12.0.jar
-│  │  │  flink-connector-redis_2.11-1.0.jar
-│  │  │  jedis-2.9.0.jar
-│  │  │  
-│  │  ├─Flink libs
-│  │  │      
-│  │  ├─Kafka libs
-│  │  │      
-│  │  ├─MySQL-Kafka
-│  │  │  │  mysql-binlog-connector-java-master.zip
-│  │  │  │  本目录说明和MySQl配置说明.txt
-│  │  │  │  
-│  │  │  └─com
-│  │  │      └─github
-│  │  │          └─shyiko
-│  │  │              └─mysql
-│  │  │                  └─binlog
-│  │  │                                      
-│  │  └─Scala libs
-│  │          
-│  ├─本地环境
-│  │  │  本地相关python环境安装.txt
-│  │  │  
-│  │  ├─MySQL
-│  │  │      mysql-8.0.27-winx64.msi
-│  │  │      mysql-workbench-community-8.0.27-winx64.msi
-│  │  │      
-│  │  └─Redis
-│  │          Redis 安装教程及使用命令.txt
-│  │          Redis-x64-4.0.14.msi
-│  │          
-│  └─虚拟机环境
-│          flink-1.12.5-bin-scala_2.11.tgz
-│          flink安装教程.txt
-│          kafka_2.11-2.4.1.tgz
-│          kafka安装教程.txt
-│          scala-2.11.5.tgz
-│          scala安装教程.txt
-│          
 └─项目实现代码
     ├─Flask至可视化（Pycharm）
     │  │  Flask.py
