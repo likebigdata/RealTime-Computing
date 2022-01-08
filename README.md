@@ -1,5 +1,5 @@
 # 实时计算[**(English Version)**](README_English/README_English.md)
-运用实时计算技术、Web 技术构建一个大数据看板来解决问题。其中实用技术包括Mysql、Kafka、Flink、Redis、Flask和echarts
+运用实时计算技术、Web 技术构建一个大数据看板来解决问题。其中实用技术包括Mysql、Kafka、Flink、Redis、Flask和Echarts
 
 ## 目录
 
