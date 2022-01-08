@@ -3,17 +3,17 @@ Use real-time computing technology and web technology to build a big data Kanban
 
 ## Catalogue
 
-[1.Problem demand](#1-Problem demand)
+[1.Problem demand](#1-Problem-demand)
 
-[2.Scheme analysis](#2-Scheme analysis)
+[2.Scheme analysis](#2-Scheme-analysis)
 
-[3.Installation environment](#3-Installation environment)
+[3.Installation environment](#3-Installation-environment)
 
-[4.Environment start command and method of running code](#4-Environment start command and method of running code)
+[4.Environment start command and method of running code](#4-Environment-start-command-and-method-of-running-code)
 
-[5.Description of code directory structure](#5-Description of code directory structure)
+[5.Description of code directory structure](#5-Description-of-code-directory-structure)
 
-[6.Frequently asked questions](#6-Frequently asked questions)
+[6.Frequently asked questions](#6-Frequently-asked-questions)
 
 [7.Author](#7-Author)
 
