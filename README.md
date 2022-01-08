@@ -230,4 +230,7 @@ MySQL-Kafka（有关Kafka读取MySQL binlog日志所有java文件）
 ## 7.作者
 nono （王泽川）
 
+指导教师：杨丰玉
+
 南昌航空大学
+
