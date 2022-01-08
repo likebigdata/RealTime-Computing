@@ -88,7 +88,7 @@ MySQL-Kafka（All java files related to Kafka reading MySQL binlog logs）
 
 数据产生器 -> MysqlToKafka.java -> KafkaToFlink.java -> Flask.py
 
-Specific startup steps
+Specific startup steps:
 ```
     1).  Start MySQL database service and redis database service first
          (if you have run this project before, you need to use the "flush" command to clear all data in the redis database.)
