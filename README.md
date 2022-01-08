@@ -35,6 +35,7 @@
 ## 2.方案分析
 
 订单数据模拟器生成数据后存入MySQL中，通过根据读取MySQL的二进制日志binlog(记录了所有的 DDL 和 DML 语句（除了数据查询语句select、show等），以事件形式记录，还包含语句所执行的消耗的时间，MySQL的二进制日志是事务安全型的.)实时获取MySQL的更新的数据，然后通过Kafka再传输到Flink的DataStream中，针对DataStream中的流数据提取主要信息后按照反射机制变成Key-Value存入Redis，利用Python 的Flask框架获取数据并进行数据处理再通过JSON的数据格式发送到定义的前端页面中（URL），最后使用Echarts框架获得需求的对应URL中的数据进行DashBoard可视化数据大屏展示。
+
 ![Scheme specific structure](/picture/Scheme_structure.png)
 
 
