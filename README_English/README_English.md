@@ -8,7 +8,7 @@
 
 4.Frequently asked questions
 
-## 1.Installation environment
+## 1. Installation environment
 ### Virtual machine environment
 ```
 Scala	2.11.5
@@ -41,7 +41,7 @@ Kafka libs（All jar packages about Kafka）
 Scala libs（All jar packages related to Scala）
 MySQL-Kafka（All java files related to Kafka reading MySQL binlog logs）
 ```
-## 2.Environment start command and method of running code
+## 2. Environment start command and method of running code
 
 数据产生器 -> MysqlToKafka.java -> KafkaToFlink.java -> Flask.py
 
@@ -50,7 +50,7 @@ MySQL-Kafka（All java files related to Kafka reading MySQL binlog logs）
 项目报告.docx）
 
 
-## 3.Description of code directory structure
+## 3. Description of code directory structure
 ```
 │  项目报告.docx
 │  Dashboard实时大屏展示.mp4
@@ -159,16 +159,16 @@ MySQL-Kafka（All java files related to Kafka reading MySQL binlog logs）
             MysqlToKafka.java
             PaymentInfo.java
 ```
-## 4.Frequently asked questions
-1) Unable to connect to MySQL's binlog. After connecting to binlog, the corresponding data cannot be accurately proposed from the log.
+## 4. Frequently asked questions
+1 Unable to connect to MySQL's binlog. After connecting to binlog, the corresponding data cannot be accurately proposed from the log.
 
-2) In Flink framework, data in datastream data stream cannot be extracted, classified and processed
+2 In Flink framework, data in datastream data stream cannot be extracted, classified and processed
 
-3) Real time chart refresh problem (data cannot be refreshed in time, refresh screen, etc.)
+3 Real time chart refresh problem (data cannot be refreshed in time, refresh screen, etc.)
 
-4) The front-end display process becomes stuck with the increase of data (using redis, memory storage occupation) over time
+4 The front-end display process becomes stuck with the increase of data (using redis, memory storage occupation) over time
 
-5）......
+5 ......
 
 （See the documents at the same level for details
 
