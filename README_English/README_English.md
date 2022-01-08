@@ -1,5 +1,4 @@
-#Catalogue
-===========================
+# Catalogue
 
 1.Installation environment
 
@@ -9,9 +8,7 @@
 
 4.Frequently asked questions
 
-
 ## 1.Installation environment
-
 ### Virtual machine environment
 ```
 Scala	2.11.5
@@ -163,7 +160,6 @@ MySQL-Kafka（All java files related to Kafka reading MySQL binlog logs）
             PaymentInfo.java
 ```
 ## 4.Frequently asked questions
-
 1) Unable to connect to MySQL's binlog. After connecting to binlog, the corresponding data cannot be accurately proposed from the log.
 
 2) In Flink framework, data in datastream data stream cannot be extracted, classified and processed
